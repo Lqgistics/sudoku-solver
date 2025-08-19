@@ -58,7 +58,7 @@ model.compile(optimizer='adam',loss='sparse_categorical_crossentropy',metrics=['
 
 model.fit(x_train, y_train, epochs=3)
 
-model.save('digits.h5')
+model.save('../models/digit_classifier.h5')
 
 
 
@@ -264,7 +264,7 @@ model.save('digits.h5')
 
 # # Evaluate the model
 # # Save the model
-# model.save("digit-recognizer3.h5")
+# model.save("../models/digit_classifier_v3.h5")
 
 # # Randomly select and display an image from the test set
 # random_image = np.random.randint(0, len(X_test))

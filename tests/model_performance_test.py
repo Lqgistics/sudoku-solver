@@ -69,7 +69,7 @@
 # model.evaluate(X_test, y_test)
 
 
-# model.save("digit-recognizer.h5")
+# model.save("../models/digit_classifier.h5")
 
 
 
@@ -98,7 +98,7 @@ import tensorflow as tf
 
 
 
-model = tf.keras.models.load_model('digit-recognizer.h5')
+model = tf.keras.models.load_model('../models/digit_classifier.h5')
 def predict_digit(img):
     #resize image to 28x28 pixels
     img = img.resize((28,28))

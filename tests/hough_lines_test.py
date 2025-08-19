@@ -91,7 +91,7 @@ def visualize_cells(image_path):
 
 
 
-model = tf.keras.models.load_model('digit-recognizer.h5')
+model = tf.keras.models.load_model('../models/digit_classifier.h5')
 
 image_path = 'board.png'
 visualize_cells(image_path)

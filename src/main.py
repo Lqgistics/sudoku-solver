@@ -21,7 +21,7 @@ app = Tk()
 # Function to close the camera, take a snapshot, and quit the application
 def close_camera():
     _, frame = vid.read()
-    cv2.imwrite("irl.jpg", frame)
+    cv2.imwrite("data/sample_images/capture.jpg", frame)
     app.quit()
 
 label_widget = Label(app)
@@ -194,7 +194,7 @@ def Suduko(grid, row, col):
     return False
 
 # Load the OCR model
-model = tf.keras.models.load_model('model-OCR.h5')
+model = tf.keras.models.load_model('models/ocr-model.h5')
 
 # Function to process and display the Sudoku puzzle
 def process_and_display():

@@ -153,7 +153,7 @@ def Suduko(grid, row, col):
 
 
 
-model = tf.keras.models.load_model('model-OCR.h5')
+model = tf.keras.models.load_model('../models/ocr_model.h5')
 
 import tkinter as tk
 import cv2  
@@ -161,7 +161,7 @@ import cv2
 def process_and_display():
     global grid, answer_button, hints_button
     start_button.pack_forget()
-    img = cv2.imread('irl.jpg', cv2.IMREAD_GRAYSCALE)
+    img = cv2.imread('../data/sample_images/test_sudoku.jpg', cv2.IMREAD_GRAYSCALE)
     processed = pre_process_image(img)
     corners = findCorners(processed)
     cropped = crop_and_warp(img, corners)

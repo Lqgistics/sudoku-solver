@@ -52,7 +52,7 @@ grid = [[2, 5, 0, 0, 3, 0, 9, 0, 1],
 
 
 import sqlite3
-connection = sqlite3.connect('answers.db')
+connection = sqlite3.connect('../data/answers.db')
 
 cursor = connection.cursor()
 cursor.execute('''CREATE TABLE IF NOT EXISTS answers (

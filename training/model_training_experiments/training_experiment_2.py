@@ -4,12 +4,12 @@ import cv2
 import numpy as np
 import pytesseract
 
-im = cv2.imread("board.png")
+im = cv2.imread("../data/sample_images/test_processed.png")
 im = cv2.resize(im, (900, 900))
 
 out = np.zeros((9, 9), dtype=np.uint8)
 
-model = tf.keras.models.load_model('digit-recognizer2.h5')
+model = tf.keras.models.load_model('../models/digit_classifier_v2.h5')
 
 for x in range(9):
     for y in range(9):
@@ -40,7 +40,7 @@ print(out)
 # import tensorflow as tf
 
 # # Load image, grayscale, and adaptive threshold
-# image = cv2.imread("board.png")
+# image = cv2.imread("../data/sample_images/test_processed.png")
 # gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # thresh = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV,57,5)
 
@@ -107,7 +107,7 @@ print(out)
 
 #     print(out)
 
-# model = tf.keras.models.load_model('digit-recognizer2.h5')
+# model = tf.keras.models.load_model('../models/digit_classifier_v2.h5')
 # out = np.zeros((9, 9), dtype=np.uint8)
 
 
